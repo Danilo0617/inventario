@@ -1,0 +1,10 @@
+[build]
+  command = "yarn build"
+  publish = "dist"
+
+# Regla de redirección para Single Page Applications (SPA)
+# Esto evita errores 404 al recargar páginas internas como /catalog
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
