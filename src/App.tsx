@@ -16,6 +16,8 @@ const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
 
   if (!currentUser) {
+    // IMPORTANTE: Aquí también agregamos el prefijo /inventario si es necesario, 
+    // pero el basename suele encargarse de esto automáticamente.
     return <Navigate to="/login" state={{ from: location }} replace />;
   }
 
@@ -46,7 +48,8 @@ function AppRoutes() {
 function App() {
   return (
     <InventoryProvider>
-      <BrowserRouter>
+      {/* Agregamos el basename aquí y es el ÚNICO Router en toda la app */}
+      <BrowserRouter basename="/inventario">
         <AppRoutes />
       </BrowserRouter>
     </InventoryProvider>
