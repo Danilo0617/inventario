@@ -104,7 +104,7 @@ const Login = () => {
           <div className="mt-6 text-center">
             <p className="text-xs text-gray-500">
               Credenciales Demo:<br/>
-              admin@daymstock.com / 123456
+              nombre@daymstock.com / 123456
             </p>
           </div>
         </div>
