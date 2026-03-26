@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { InventoryProvider, useInventory } from './context/InventoryContext';
 import Layout from './components/Layout';
 import Dashboard from './pages/Dashboard';
